@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — DevBlog",
+  title: "About Me",
   description: "Learn more about me and my tech journey.",
 };
 
@@ -24,15 +24,12 @@ export default function AboutPage() {
                 Ryan Saena
               </h2>
               <p className="text-zinc-600 dark:text-zinc-400">
-                Software Engineer
+                Cloud Solution Architect
               </p>
             </div>
           </div>
           <p className="leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Hey there! I&apos;m a software engineer passionate about building
-            great products and continuously learning new technologies. This blog
-            is where I document my journey — the things I learn, the problems I
-            solve, and the experiences I gain along the way.
+            Hey there! I&apos;m a Cloud Solution Architect @ Microsoft.
           </p>
         </section>
 
