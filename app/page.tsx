@@ -1,20 +1,11 @@
 import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/posts";
-import Link from "next/link";
 
 const skills = [
-  "TypeScript",
-  "JavaScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Python",
-  "Git",
-  "REST APIs",
-  "Tailwind CSS",
-  "SQL",
-  "Docker",
-  "Cloud (AWS/Azure)",
+  "Microsoft Azure",
+  "GitHub Copilot",
+  "AI & Machine Learning",
+  "DevOps",
 ];
 
 export default function Home() {
@@ -27,21 +18,19 @@ export default function Home() {
         <aside className="w-full flex-shrink-0 space-y-5 md:sticky md:top-20 md:w-72 md:self-start">
           {/* Avatar + Bio */}
           <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
-            <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-violet-600 text-xl font-bold text-white">
+            <div className="mb-4 flex flex-col items-center text-center">
+              <div className="mb-3 flex h-32 w-32 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-violet-600 text-4xl font-bold text-white">
                 RS
               </div>
-              <div>
-                <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-                  Ryan Saena
-                </h2>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                  Software Engineer
-                </p>
-              </div>
+              <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                Ryan Saena
+              </h2>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                Cloud & AI Solution Architect
+              </p>
             </div>
-            <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              Hey there! I&apos;m a software engineer passionate about building
+            <p className="text-center text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              Hey there! I&apos;m a Cloud &amp; AI Solution Architect passionate about building
               great products and continuously learning new technologies. This
               blog is where I document my journey.
             </p>
@@ -71,32 +60,18 @@ export default function Home() {
             </h3>
             <div className="flex flex-col gap-2">
               <a
-                href="https://github.com/ryansaena"
+                href="https://au.linkedin.com/in/ryan-saena-819842258"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-zinc-600 transition-colors hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400"
               >
-                GitHub →
+                LinkedIn
               </a>
-              <a
-                href="https://linkedin.com/in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-zinc-600 transition-colors hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400"
-              >
-                LinkedIn →
-              </a>
-              <Link
-                href="/about"
-                className="text-sm text-zinc-600 transition-colors hover:text-blue-600 dark:text-zinc-400 dark:hover:text-blue-400"
-              >
-                Full bio →
-              </Link>
             </div>
           </div>
         </aside>
 
-        {/* Right scrollable — Blog Posts */}
+        {/* Right — Blog Posts */}
         <div className="min-w-0 flex-1">
           <h2 className="mb-6 text-2xl font-bold text-zinc-900 dark:text-zinc-100">
             Posts
@@ -108,7 +83,7 @@ export default function Home() {
               ))}
             </div>
           ) : (
-            <p className="text-zinc-500 dark:text-zinc-400">No posts yet.</p>
+            <p className="text-center text-zinc-500 dark:text-zinc-400">No posts yet.</p>
           )}
         </div>
       </div>

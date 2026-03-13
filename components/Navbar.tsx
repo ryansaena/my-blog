@@ -2,46 +2,30 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur-md dark:border-zinc-800 dark:bg-zinc-950/80">
-      <nav className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
+    <nav className="flex items-center justify-center gap-6 px-6 py-6">
+      {links.map(({ href, label }) => (
         <Link
-          href="/"
-          className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
+          key={href}
+          href={href}
+          className={`text-2xl font-bold transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
+            pathname === href
+              ? "text-blue-600 dark:text-blue-400"
+              : "text-zinc-600 dark:text-zinc-400"
+          }`}
         >
-          {"<DevBlog />"}
+          {label}
         </Link>
-        <div className="flex items-center gap-6">
-          <ul className="flex items-center gap-6">
-            {links.map(({ href, label }) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={`text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
-                    pathname === href
-                      ? "text-blue-600 dark:text-blue-400"
-                      : "text-zinc-600 dark:text-zinc-400"
-                  }`}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <ThemeToggle />
-        </div>
-      </nav>
-    </header>
+      ))}
+    </nav>
   );
 }

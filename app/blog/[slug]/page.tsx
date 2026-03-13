@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
-  return { title: `${post.title} — DevBlog`, description: post.excerpt };
+  return { title: `${post.title} — Ryan Saena`, description: post.excerpt };
 }
 
 export default async function BlogPostPage({ params }: Props) {

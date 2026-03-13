@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DevBlog — My Tech Journey",
+  title: "Ryan Saena — My Tech Journey",
   description:
     "A personal blog documenting learnings and experiences in tech.",
 };
